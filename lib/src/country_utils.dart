@@ -97,7 +97,10 @@ class CountryUtils {
   static List<Country> searchByName(String searchTerm) {
     final term = searchTerm.toLowerCase();
     return countries
-        .where((country) => country.name.toLowerCase().contains(term))
+        .where((country) =>
+            country.name.toLowerCase().contains(term) ||
+            country.dialCode.toLowerCase().contains(term) ||
+            country.iso3Code.toLowerCase().contains(term))
         .toList();
   }
 

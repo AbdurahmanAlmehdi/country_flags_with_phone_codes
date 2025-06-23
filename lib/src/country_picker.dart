@@ -89,6 +89,7 @@ class CountryPicker extends StatelessWidget {
                   if (showDialCode)
                     Text(
                       country.dialCode,
+                      textDirection: TextDirection.ltr,
                       style: dialCodeStyle ??
                           Theme.of(context).textTheme.bodyMedium?.copyWith(
                                 color: Theme.of(context)
@@ -211,7 +212,12 @@ class _CountryListPickerState extends State<CountryListPicker> {
               decoration: InputDecoration(
                 hintText: widget.searchHint,
                 prefixIcon: const Icon(Icons.search),
-                border: const OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: BorderSide(
+                    color: Colors.grey.withOpacity(0.2),
+                  ),
+                ),
                 filled: true,
                 fillColor: Theme.of(context).colorScheme.surface,
               ),
