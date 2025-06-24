@@ -215,11 +215,11 @@ class _CountryListPickerState extends State<CountryListPicker> {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(
-                    color: Colors.grey.withOpacity(0.2),
+                    color: Colors.black,
                   ),
                 ),
                 filled: true,
-                fillColor: Theme.of(context).colorScheme.surface,
+                fillColor: Colors.grey.withOpacity(0.2),
               ),
             ),
           ),
